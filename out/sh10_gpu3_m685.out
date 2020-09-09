@@ -1,0 +1,99 @@
+Config: Config: -----
+model_ind: 685
+arch: ClusterNet6cTwoHead
+opt: Adam
+mode: IID
+dataset: MNIST
+dataset_root: ./datasets/MNIST
+gt_k: 10
+output_k_A: 50
+output_k_B: 10
+lamb_A: 1.0
+lamb_B: 1.0
+lr: 0.0001
+lr_schedule: []
+lr_mult: 0.1
+num_epochs: 3200
+batch_sz: 700
+num_dataloaders: 5
+num_sub_heads: 5
+out_root: /home/asc/experi/IIC-master/out
+restart: False
+restart_from_best: False
+test_code: False
+save_freq: 20
+double_eval: False
+head_A_first: False
+head_A_epochs: 1
+head_B_epochs: 2
+batchnorm_track: False
+save_progression: False
+select_sub_head_on_loss: False
+demean: False
+per_img_demean: False
+data_mean: [0.5, 0.5, 0.5]
+data_std: [0.5, 0.5, 0.5]
+crop_orig: True
+crop_other: True
+tf1_crop: centre_half
+tf2_crop: random
+tf1_crop_sz: 20
+tf2_crop_szs: [16, 20, 24]
+tf3_crop_diff: False
+tf3_crop_sz: 0
+input_sz: 24
+rot_val: 25.0
+always_rot: False
+no_jitter: False
+no_flip: True
+twohead: True
+in_channels: 1
+out_dir: /home/asc/experi/IIC-master/out/685
+dataloader_batch_sz: 140.0
+output_k: 10
+eval_mode: hung
+train_partitions: [True, False]
+mapping_assignment_partitions: [True, False]
+mapping_test_partitions: [True, False]
+----------
+selected centre_half crop for tf1
+tf3 crop size is same as tf1
+adding rotation option for imgs_tf: 25
+not always_rot
+selected random crop for tf2
+adding crop size option for imgs_tf: 16
+selected random crop for tf2
+adding crop size option for imgs_tf: 20
+selected random crop for tf2
+adding crop size option for imgs_tf: 24
+not adding flip
+adding jitter
+not demeaning data
+not per image demeaning data
+Making datasets with <class 'torchvision.datasets.mnist.MNIST'> and None
+Creating auxiliary dataloader ind 0 out of 5 time 2020-06-03 19:07:18.025200
+Creating auxiliary dataloader ind 1 out of 5 time 2020-06-03 19:07:18.045232
+Creating auxiliary dataloader ind 2 out of 5 time 2020-06-03 19:07:18.064597
+Creating auxiliary dataloader ind 3 out of 5 time 2020-06-03 19:07:18.083711
+Creating auxiliary dataloader ind 4 out of 5 time 2020-06-03 19:07:18.102858
+Length of datasets vector 6
+Number of batches per epoch: 500
+Creating auxiliary dataloader ind 0 out of 5 time 2020-06-03 19:07:18.141013
+Creating auxiliary dataloader ind 1 out of 5 time 2020-06-03 19:07:18.160306
+Creating auxiliary dataloader ind 2 out of 5 time 2020-06-03 19:07:18.179535
+Creating auxiliary dataloader ind 3 out of 5 time 2020-06-03 19:07:18.198725
+Creating auxiliary dataloader ind 4 out of 5 time 2020-06-03 19:07:18.217887
+Length of datasets vector 6
+Number of batches per epoch: 500
+semisup: False
+Pre: time 2020-06-03 19:07:27.087756: 
+ 	test_accs: [0.1602, 0.21605714, 0.20781429, 0.19332857, 0.22807142]
+	avg: 0.20109427
+	std: 0.023364333
+	best: 0.22807142
+	worst: 0.1602
+	best_train_sub_head: 4
+	best_train_sub_head_match: [(0, 3), (1, 7), (2, 8), (3, 2), (4, 4), (5, 1), (6, 6), (7, 5), (8, 9), (9, 0)]
+	train_accs: [0.1602, 0.21605714, 0.20781429, 0.19332857, 0.22807142]
+
+Starting e_i: 1

@@ -1,0 +1,73 @@
+Config: Config: -----
+model_ind: 640
+arch: ClusterNet5gTwoHead
+opt: Adam
+mode: IID
+dataset: CIFAR10
+dataset_root: /home/asc/experi/IIC-master/datasets/CIFAR
+gt_k: 10
+output_k_A: 70
+output_k_B: 10
+lamb: 1.0
+lr: 0.0001
+lr_schedule: []
+lr_mult: 0.1
+num_epochs: 2000
+batch_sz: 660
+num_dataloaders: 3
+num_sub_heads: 5
+out_root: /home/asc/experi/IIC-master/out
+restart: False
+restart_from_best: False
+test_code: False
+stl_leave_out_unlabelled: False
+save_freq: 10
+double_eval: False
+head_A_first: True
+head_A_epochs: 1
+head_B_epochs: 2
+batchnorm_track: False
+select_sub_head_on_loss: False
+mix_train: False
+include_rgb: False
+demean: False
+per_img_demean: False
+data_mean: []
+data_std: []
+crop_orig: True
+rand_crop_sz: 20
+input_sz: 32
+fluid_warp: False
+rand_crop_szs_tf: []
+rot_val: 0.0
+cutout: False
+cutout_p: 0.5
+cutout_max_box: 0.5
+twohead: True
+in_channels: 2
+out_dir: /home/asc/experi/IIC-master/out/640
+dataloader_batch_sz: 220
+output_k: 10
+eval_mode: hung
+----------
+(_sobel_multioutput_make_transforms) config.include_rgb: False
+not using cutout
+not demeaning data
+not per image demeaning data
+Making datasets with <class 'torchvision.datasets.cifar.CIFAR10'> and None
+Files already downloaded and verified
+Files already downloaded and verified
+Creating auxiliary dataloader ind 0 out of 3 time 2020-06-10 15:42:40.865896
+Creating auxiliary dataloader ind 1 out of 3 time 2020-06-10 15:42:41.515201
+Creating auxiliary dataloader ind 2 out of 3 time 2020-06-10 15:42:42.188232
+Length of datasets vector 4
+Number of batches per epoch: 273
+Files already downloaded and verified
+Files already downloaded and verified
+Creating auxiliary dataloader ind 0 out of 3 time 2020-06-10 15:42:44.091350
+Creating auxiliary dataloader ind 1 out of 3 time 2020-06-10 15:42:44.788620
+Creating auxiliary dataloader ind 2 out of 3 time 2020-06-10 15:42:45.515388
+Length of datasets vector 4
+Number of batches per epoch: 273
+avg_pool_sz 3
+semisup: False

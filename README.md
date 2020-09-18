@@ -5,5 +5,5 @@ The original code is from https://github.com/xu-ji/IIC
 Currently, ./iic/cluster_sobel_twohead.py has been converted and can be run.  
 
 IIC is an unsupervised clustering algorithm which was introduced in ICCV2019.  
-The paper title is "Invariant Information Clustering for Unsupervised Image Classification and Segmentation"
+The paper title is ["Invariant Information Clustering for Unsupervised Image Classification and Segmentation"](https://arxiv.org/abs/1807.06653)
 
